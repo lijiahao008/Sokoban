@@ -1,0 +1,48 @@
+<html>
+
+	<head>
+		<title>Sokoban</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+
+	<body>
+		<div id="background">
+		</div>
+			<div class="buttons">
+				<button id="start-button" onclick="start()">Start</button>
+				<button id="next-level" onclick="nextLevel()">Next Level</button>
+				<button onclick="startListen()">Listen</button>
+				<button onclick="continuousListen()">Continuous Listen</button>
+				<button onclick="showInstruction()">Instructions</button>
+			</div>
+			<div id="instructions-holder">
+			</div>
+
+			<div id="header">
+				<div class="info">
+					<h1>Moves: </h1>
+					<h2 id="moves">0</h2>
+					<h1>Levels: </h1>
+					<h2 id="level">0</h2>
+				</div>
+				<div id="game-window">
+				</div>
+				<div class="command">
+					<h2>Your command: </h2>
+	      	<h3 id="command"></h3>
+				</div>
+	    </div>
+			<div id="winning">
+			</div>
+
+
+	</body>
+
+  <script type="text/javascript" src="lib/voice_command.js"></script>
+  <script type="text/javascript" src="lib/sokoban.js"></script>
+  <script type="text/javascript" src="lib/levels/level_one.js"></script>
+  <script type="text/javascript" src="lib/levels/level_two.js"></script>
+  <script type="text/javascript" src="lib/levels/level_three.js"></script>
+
+
+</html>
