@@ -1,0 +1,113 @@
+body {
+  margin: 0px;
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+#background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.5);
+  z-index: 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  z-index: 2;
+}
+
+.command {
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  right: 30%;
+}
+
+.info {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  color: white;
+}
+
+.buttons {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+
+}
+
+.buttons > button {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  background: none;
+}
+
+.buttons > button:hover{
+  cursor: pointer;
+}
+
+.buttons > button:focus{
+  outline: none;
+}
+
+#instructions {
+  position: fixed;
+  background: black;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+}
+
+#instructions > h4 {
+  color: white;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 30%;
+}
+
+#instructions > h4 > button {
+  color: white;
+  font-size: 20px;
+  background: green;
+  border: none;
+
+}
+
+#instructions > h4 > button:hover {
+  cursor: pointer;
+}
+
+#game-window {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  z-index: 5;
+}
+
+#winning-message {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.7;
+  color: white;
+  z-index: 20;
+}
+
+#winning-message > h2 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  color: white;
+  z-index: 21;
+}
