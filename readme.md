@@ -1,42 +1,50 @@
 ## Sokoban
 
+[Live](https://www.lijiahao008.github.io/Sokoban)
+
+Sokoban is a classic game which a player will push boxes to the target position without running into a dead-end. In this particular version, user can also interact with the game only with their voice.
+
 ![sokoban]
 
-### Background
+### How to Play
 
-Sokoban is a classic game which a player will push boxes to the target position without running into a dead-end.
+To Start the game: Click on Listen or Continuous Listen, give your browser access to your microphone and say your command (ex: start the game, next level, go up, move left...) or click on start and use your arrow keys or W, S, A, D to control the player. If everything went as expected, you should be able to see your voice command under "Your command" section.
 
-1) There will be at least 3 levels for this game.
-2) A box will be impossible to move once it's pushed into any corner.
-3) Each level will have a different map.
+### Features
 
+#### Image Mapping
+This game is built with vanilla javascript and HTML, therefore, all image rendering are done through image mapping. After each keyboard input, an entire new map is rendered based on the player's move. By detecting the direction and assigning different images of the player, it will creating a visual effect that reflects the player's walking motion.
 
-### Functionality & MVP  
+```javascript
+change_image(y, x){
+  var image_number = 'f' + y + '_' + x;
+  switch (grid[y][x]){
+    case 20:
+      assign_image(image_number, box_image);
+      break;
+    case 100:
+      switch(direction){
+      case 1:
+        assign_image(image_number,player_walking_up);
+        break;
+      case 2:
+        assign_image(image_number,player_walking_left);
+        break;
+      case 3:
+        assign_image(image_number,player_walking_right);
+        break;
+      case 4:
+        assign_image(image_number,player_walking_down);
+        break;
+      default:
+        assign_image(image_number,player_image);
+        break;
+      }
+  }
+}
+```
 
-With this Sokoban Game of Life simulator, users will be able to:
-
-- [ ] Start and reset the game board
-- [ ] Use keyboard to control the player
-- [ ] Switch levels using voice command
-- [ ] Use voice control to move the player
-- [ ] Have the browser listen to the user continuously and response accordingly.
-
-
-### Architecture and Technologies
-
-This project will be implemented with the following technologies:
-
-- Vanilla JavaScript for overall structure and game logic,
-- Google voice recognition api for enabling control over the player over voice,
-
-There will be three scripts involved in this project:
-
-`sokoban.js`: this script will handle the logic for creating, updating and rendering on the browser.
-
-`voice_command.js`: this script will be responsible to respond to player's voice input.
-
-`levels.js`: each level will be one separate file for easy management of maps for different levels.
-
-
+#### Voice Command
+By utilizing the Google Voice Recognition API, this game is capable of listening to player's voice command and translate it into keyboard input. It also provides a continuous mode which will keep listening to player's voice input and response with the corresponding actions without the need to fire up the command again.
 
 [sokoban]: ./assets/images/sokoban.jpg
