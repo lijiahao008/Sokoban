@@ -3,39 +3,47 @@
 	<head>
 		<title>Sokoban</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" href="		https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 	<body>
 		<div id="background">
 		</div>
-			<div class="buttons">
-				<button id="start-button" onclick="start()">Start</button>
-				<button id="next-level" onclick="nextLevel()">Next Level</button>
-				<button onclick="startListen()">Listen</button>
-				<button onclick="continuousListen()">Continuous Listen</button>
-				<button onclick="showInstruction()">Instructions</button>
-			</div>
-			<div id="instructions-holder">
-			</div>
 
-			<div id="header">
-				<div class="info">
-					<h1>Moves: </h1>
-					<h2 id="moves">0</h2>
-					<h1>Levels: </h1>
-					<h2 id="level">0</h2>
-				</div>
-				<div id="game-window">
-				</div>
-				<div class="command">
-					<h2>Your command: </h2>
-	      	<h3 id="command"></h3>
-				</div>
-	    </div>
-			<div id="winning">
+		<div class="buttons">
+			<button id="start-button" onclick="start()"><i class="fa fa-play"></i> Start</button>
+			<button id="next-level" onclick="nextLevel()"><i class="fa fa-step-forward"></i> Next Level</button>
+			<button onclick="startListen()"><i class="fa fa-microphone"></i> Listen</button>
+			<button onclick="continuousListen()"><i class="fa fa-headphones"></i> Continuous Listen</button>
+			<button onclick="showInstruction()"><i class="fa fa-info"></i> Instructions</button>
+		</div>
+
+		<div id="instructions-holder">
+		</div>
+
+		<div id="header">
+			<div class="info">
+				<h1>Moves: </h1>
+				<h2 id="moves">0</h2>
+				<h1>Levels: </h1>
+				<h2 id="level">0</h2>
 			</div>
+			<div id="game-window">
+			</div>
+			<div class="command">
+				<h2>Your command: </h2>
+      	<h3 id="command"></h3>
+			</div>
+    </div>
 
+		<div id="winning"></div>
 
+		<div class="footer">
+			<p>Made with <i class="fa fa-heart love"></i> by Jay Li
+				<a class="social-icon" href="https://github.com/lijiahao008"><i class="fa fa-github"></i></a>
+				<a class="social-icon" href="https://www.linkedin.com/in/jiahao-li-807a0b55/"><i class="fa fa-linkedin"></i></a>
+				</p>
+		</div>
 	</body>
 
   <script type="text/javascript" src="lib/voice_command.js"></script>
