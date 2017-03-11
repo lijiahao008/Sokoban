@@ -1,6 +1,6 @@
 ## Sokoban
 
-[Live](https://www.lijiahao008.github.io/Sokoban)
+[Live](https://lijiahao008.github.io/Sokoban)
 
 Sokoban is a classic game which a player will push boxes to the target position without running into a dead-end. In this particular version, user can also interact with the game only with their voice.
 
