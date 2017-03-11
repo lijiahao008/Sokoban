@@ -2,18 +2,18 @@
 
 [Live](https://lijiahao008.github.io/Sokoban)
 
-Sokoban is a classic game which a player will push boxes to the target position without running into a dead-end. In this particular version, user can also interact with the game only with their voice.
+Sokoban is a classic game in which a player will push boxes to a target position while avoiding running into a dead-end. This version also features voice activated commands.
 
 ![sokoban]
 
 ### How to Play
 
-To Start the game: Click on Listen or Continuous Listen, give your browser access to your microphone and say your command (ex: start the game, next level, go up, move left...) or click on start and use your arrow keys or W, S, A, D to control the player. If everything went as expected, you should be able to see your voice command under "Your command" section.
+To Start the game: Click on ‘Listen’ or ‘Continuous Listen’, give your browser access to your microphone and say your command (ex: “start the game”, “next level”, “go up”, “move left”...).  Users may also click on start and use arrow keys or W, S, A, D to control the player. If everything went as expected, you should be able to see your voice command under the "Your command" section.
 
 ### Features
 
 #### Image Mapping
-This game is built with vanilla javascript and HTML, therefore, all image rendering are done through image mapping. After each keyboard input, an entire new map is rendered based on the player's move. By detecting the direction and assigning different images of the player, it will creating a visual effect that reflects the player's walking motion.
+This game is built with vanilla javascript and HTML.  Therefore all image rendering is done through image mapping.  After each keyboard input, an entire new map is rendered based on the player's move. By detecting the direction and assigning different images of the player, it will creating a visual effect that reflects the player's walking motion.
 
 ```javascript
 change_image(y, x){
@@ -45,6 +45,6 @@ change_image(y, x){
 ```
 
 #### Voice Command
-By utilizing the Google Voice Recognition API, this game is capable of listening to player's voice command and translate it into keyboard input. It also provides a continuous mode which will keep listening to player's voice input and response with the corresponding actions without the need to fire up the command again.
+By utilizing the Google Voice Recognition API, this game is capable of listening to a player's voice command and translating it into keyboard a input. It also provides a continuous mode which will keep listening to a player's voice and respond with the corresponding actions without the need to repeatedly click the “listen” button.
 
 [sokoban]: ./assets/images/sokoban.jpg
