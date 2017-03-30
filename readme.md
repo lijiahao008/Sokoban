@@ -1,6 +1,6 @@
 ## Sokoban
 
-[Live](https://lijiahao008.github.io/Sokoban)
+[Play it Live!](https://lijiahao008.github.io/Sokoban)
 
 Sokoban is a classic game in which a player will push boxes to a target position while avoiding running into a dead-end. This version also features voice activated commands.
 
@@ -45,6 +45,14 @@ change_image(y, x){
 ```
 
 #### Voice Command
-By utilizing the Google Voice Recognition API, this game is capable of listening to a player's voice command and translating it into keyboard a input. It also provides a continuous mode which will keep listening to a player's voice and respond with the corresponding actions without the need to repeatedly click the “listen” button.
+By utilizing the Google Voice Recognition API, this game is capable of listening to a player's voice command and translating it into keyboard a input. It also provides a continuous mode which will keep listening to a player's voice and respond with the corresponding actions without the need to repeatedly click the “listen” button. Below is one example for sending an API request:
+
+```javascript
+function startListen() {
+  sr = new webkitSpeechRecognition();
+  sr.onresult = evt => (listenCallback(evt.results[0][0].transcript));
+  sr.start();
+}
+```
 
 [sokoban]: ./assets/images/sokoban.jpg
