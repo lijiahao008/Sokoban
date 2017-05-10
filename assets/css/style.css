@@ -82,6 +82,15 @@ body {
   outline: none;
 }
 
+.buttons > button:last-child:hover{
+  cursor: auto;
+  opacity: 1;
+}
+
+.red {
+  color: red !important;
+}
+
 #instructions {
   position: fixed;
   background: black;
